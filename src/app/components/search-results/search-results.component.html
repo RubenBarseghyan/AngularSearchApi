@@ -1,0 +1,16 @@
+<div *ngIf="comments$ | async as comments">
+    <cdk-virtual-scroll-viewport itemSize="80" class="viewport">
+      <mat-list class="comment-list">
+        <mat-list-item
+          *cdkVirtualFor="let comment of comments"
+          class="comment-item"
+        >
+          <div class="comment-header">
+            <h4 class="comment-name">{{ comment.name }}</h4>
+            <div class="comment-email">{{ comment.email }}</div>
+          </div>
+          <div class="comment-body">{{ comment.body }}</div>
+        </mat-list-item>
+      </mat-list>
+    </cdk-virtual-scroll-viewport>
+  </div>

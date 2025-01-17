@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CommentsComponent } from './components/comments.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommentsComponent],
+  imports: [
+    RouterOutlet,
+    SearchBarComponent,
+    SearchResultsComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'SearchApi';
