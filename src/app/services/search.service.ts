@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-// import { Comment } from '../models/comment.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +10,7 @@ export class SearchService {
 
   constructor(private readonly http: HttpClient) {}
 
-  search(query: string): Observable<Comment[]> {
+  search(query: string): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}?q=${query}`);
   }
 }

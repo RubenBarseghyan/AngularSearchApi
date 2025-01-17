@@ -7,10 +7,15 @@ export const searchComments = createAction(
 
 export const searchCommentsSuccess = createAction(
   '[Search] Search Comments Success',
-  props<{ comments: Comment[] }>()
+  props<{ query: string, comments: any[] }>()
 );
 
 export const searchCommentsFailure = createAction(
   '[Search] Search Comments Failure',
   props<{ error: any }>()
+);
+
+export const saveSearchQuery = createAction(
+  '[Search] Save Search Query',
+  props<{ query: string }>()
 );
